@@ -1,0 +1,21 @@
+.admin{
+  margin: 0 20px;
+}
+.admin span{
+   display: inline-block;
+   transform: translateY(-5px);
+}
+
+.option-right{
+  padding: 20px;
+}
+
+.option-right a{
+  text-decoration: none;
+  padding: 0 15px;
+}
+
+.option-right a i{
+  color: #99999b;
+  font-size: 25px;
+}

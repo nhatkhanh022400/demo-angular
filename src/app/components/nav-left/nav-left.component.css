@@ -1,0 +1,102 @@
+.sisdebar{
+  /* position: fixed; */
+  background-color: #eaebef;
+  width: 250px;
+  height: 100%;
+  left: 0;
+
+}
+
+.sisdebar .menu{
+
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 65px;
+  text-align: left;
+  background: #eaebef;
+
+}
+
+nav ul{
+  background: #eaebef;
+  height: 100%;
+  width: 100%;
+  list-style: none;
+}
+
+nav ul li{
+  line-height: 60px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+nav ul li a{
+  position: relative;
+  color: #b296b1;
+  background: #eaebef;
+  text-decoration: none;
+  font-size: 14px;
+  padding-left: 40px;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  border-left: 3px solid transparent;
+  text-align: left;
+}
+
+
+
+nav ul ul{
+  position: static;
+  display: none;
+}
+
+nav ul .first-show.show{
+  display: block;
+}
+
+nav ul .second-show.show{
+  display: block;
+}
+
+nav ul .third-show.show{
+  display: block;
+}
+
+nav ul .four-show.show{
+  display: block;
+}
+
+nav ul .five-show.show{
+  display: block;
+}
+
+nav ul ul li{
+  line-height: 42px;
+  border-bottom: none;
+}
+
+nav ul ul li a{
+  font-size: 14px;
+  color: #495660;
+  text-align: left;
+  width: 95%;
+}
+
+nav ul ul li:hover a{
+  background-color: #eaebef;
+  font-weight: bold;
+}
+
+nav ul li a span{
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  font-weight: bold;
+  transition: transform 0.4s;
+}
+
+nav ul li a:hover span{
+  transform: translateY(-50%) rotate(-180deg);
+}

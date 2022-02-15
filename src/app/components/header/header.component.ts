@@ -1,3 +1,4 @@
+import { faAngleDoubleRight, faBars, faBorderNone, faCog, faFile, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,5 +12,13 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  faCog = faCog;
+  faBars = faBars;
+  faAngleDoubleRight = faAngleDoubleRight;
+  faBorderNone = faBorderNone;
+  faFile = faFile;
+  faSignOutAlt = faSignOutAlt;
+
+
 
 }

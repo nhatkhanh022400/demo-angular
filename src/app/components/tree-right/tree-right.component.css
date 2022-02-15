@@ -1,6 +1,8 @@
 .structure-tree{
   background-color: #eaebef;
   padding: 3rem 1rem;
+  min-width: 1220px;
+  font-size: 14px;
 }
 
 .five-button{
@@ -104,3 +106,8 @@
 .structure .fas{
   font-size: 13px;
 }
+
+fa-icon{
+  margin-left: 3px;
+}
+

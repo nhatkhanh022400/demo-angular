@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faChevronDown, faBuilding, faDollarSign, faUser, faSitemap, faStreetView, faFileAlt, faCogs, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-nav-left',
@@ -11,5 +12,14 @@ export class NavLeftComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  faChevronDown = faChevronDown;
+  faBuilding = faBuilding;
+  faDollarSign = faDollarSign;
+  faUser = faUser;
+  faSitemap = faSitemap;
+  faStreetView = faStreetView;
+  faFileAlt = faFileAlt;
+  faCogs = faCogs;
+  faEnvelope = faEnvelope;
 
 }

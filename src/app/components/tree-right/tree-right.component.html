@@ -1,11 +1,11 @@
 <div class="structure-tree col-9">
 
   <div class="five-button">
-      <button><i class="fas fa-sync-alt" style="color: #1a6fdc;"></i>Refresh</button>
-      <button><a href="http://127.0.0.1:5500/popup.html" style="text-decoration: none; color: black;"><i class="fas fa-plus" style="color: #3f9c4b;"></i>Thêm mới</a></button>
-      <button><i class="far fa-file-excel"  style="color: #779576;"></i>Xuất file Exccel</button>
-      <button><i class="fas fa-cloud-download-alt"></i>Tải file mẫu</button>
-      <button><i class="fas fa-upload"  style="color: #bb3b45;"></i>Import</button>
+      <button><fa-icon [icon]="faSyncAlt" style="color: #1a6fdc;"></fa-icon>Refresh</button>
+      <button><a href="http://127.0.0.1:5500/popup.html" style="text-decoration: none; color: black;"><fa-icon [icon]="faPlus" style="color: #3f9c4b;"></fa-icon>Thêm mới</a></button>
+      <button><fa-icon [icon]="faFileExcel" style="color: #779576;"></fa-icon>Xuất file Exccel</button>
+      <button><fa-icon [icon]="faCloudDownloadAlt"></fa-icon>Tải file mẫu</button>
+      <button><fa-icon [icon]="faCloudDownloadAlt" style="color: #bb3b45;"></fa-icon>Import</button>
   </div>
 
   <div class="tree">
@@ -16,11 +16,10 @@
                   <a href="#" style="text-decoration: none; color: black;">
                       <div class="first-row d-flex">
                           <div class="note">Hệ thống quản lý trực tuyến OOC</div>
-                          <p class="col-7"> <i class="fas fa-chevron-down"></i>Hệ thống quản lý trực tuyến OOC</p>
+                          <p class="col-7"><fa-icon [icon]="faChevronDown"></fa-icon>Hệ thống quản lý trực tuyến OOC</p>
                           <p class="code col-1">Mã</p>
                           <p class="col-3">Mô tả chức năng - nhiệm vụ</p>
-                          <p class="col-1 "><i class="fas fa-plus float-end"
-                                  style="color: blue; padding-top: 10px;"></i></p>
+                          <p class="col-1 "><fa-icon [icon]="faPlus" style="color: blue; padding-top: 10px; float: right;"></fa-icon></p>
                       </div>
                   </a>
 
@@ -29,8 +28,8 @@
                           <a href="#" style="text-decoration: none; color: black;">
                               <div class="first-one-row d-flex">
                                   <p class="col-7">
-                                      <i class="fas fa-chevron-down"></i>
-                                      <i class="fas fa-sitemap" style="color: #4493c9;"></i> Giám đốc
+                                    <fa-icon [icon]="faChevronDown"></fa-icon>
+                                    <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon> Giám đốc
                                   </p>
                                   <p class="code-one col-1">
                                       BGD-1
@@ -39,9 +38,9 @@
                                       Điều hành hoạt động doanh
                                   </p>
                                   <p class="col-1 float-end" style="text-align: right;">
-                                      <i class="fas fa-plus" style="color: blue;"></i>
-                                      <i class="fas fa-pencil-alt" style="color: yellow;"></i>
-                                      <i class="fas fa-trash-alt" style="color: red;"></i>
+                                    <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
+                                    <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
+                                    <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
                                   </p>
                               </div>
                           </a>
@@ -50,8 +49,8 @@
                                   <a href="#" style="text-decoration: none; color: black;">
                                       <div class="first-one-one-row d-flex">
                                           <p class="col-7">
-                                              <i class="fas fa-chevron-down"></i>
-                                              <i class="fas fa-sitemap" style="color: #4493c9;"></i> Phó giám đốc Phụ trách kinh doanh
+                                            <fa-icon [icon]="faChevronDown"></fa-icon>
+                                            <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon> Phó giám đốc Phụ trách kinh doanh
                                           </p>
                                           <p class="col-1">
                                               BGD-2
@@ -60,9 +59,9 @@
                                               Điều hành khối kinh doanh
                                           </p>
                                           <p class="col-1" style="text-align: right;">
-                                              <i class="fas fa-plus" style="color: blue;"></i>
-                                              <i class="fas fa-pencil-alt" style="color: yellow;"></i>
-                                              <i class="fas fa-trash-alt" style="color: red;"></i>
+                                            <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
+                                            <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
+                                            <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
                                           </p>
                                       </div>
                                   </a>
@@ -71,18 +70,18 @@
                                           <a href="#" style="text-decoration: none; color: black;">
                                               <div class="first-one-one-one-row d-flex">
                                                   <p class="col-7">
-                                                      <i class="fas fa-sitemap" style="color: #4493c9;"></i>Phòng phát triển thị trường
+                                                    <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon>Phòng phát triển thị trường
                                                   </p>
                                                   <p class="code-three col-1">
                                                       PTTT
                                                   </p>
                                                   <p class="col-3">
-                                                      Marketing, chính sách giá cước
+                                                      Marketing, chính sách giá
                                                   </p>
                                                   <p class="col-1" style="text-align: right;">
-                                                      <i class="fas fa-plus" style="color: blue;"></i>
-                                                      <i class="fas fa-pencil-alt" style="color: yellow;"></i>
-                                                      <i class="fas fa-trash-alt" style="color: red;"></i>
+                                                    <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
+                                                    <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
+                                                    <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
                                                   </p>
                                               </div>
                                           </a>
@@ -91,7 +90,7 @@
                                           <a href="#" style="text-decoration: none; color: black;">
                                               <div class="first-one-one-two-row d-flex">
                                                   <p class="col-7">
-                                                      <i class="fas fa-sitemap" style="color: #4493c9;"></i>Phòng Kinh doanh
+                                                    <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon>Phòng Kinh doanh
                                                   </p>
                                                   <p class="code-four col-1">
                                                       KD
@@ -100,9 +99,9 @@
                                                       Mô tả chung
                                                   </p>
                                                   <p class="col-1" style="text-align: right;">
-                                                      <i class="fas fa-plus" style="color: blue;"></i>
-                                                      <i class="fas fa-pencil-alt" style="color: yellow;"></i>
-                                                      <i class="fas fa-trash-alt" style="color: red;"></i>
+                                                    <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
+                                                    <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
+                                                    <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
                                                   </p>
                                               </div>
                                           </a>
@@ -113,7 +112,7 @@
                                   <a href="#" style="text-decoration: none; color: black;">
                                       <div class="first-one-two-row d-flex">
                                           <p class="col-7">
-                                              <i class="fas fa-sitemap" style="color: #4493c9;"></i>Phòng Tài chính Kế Toán
+                                            <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon>Phòng Tài chính Kế Toán
                                           </p>
                                           <p class="col-1">
                                               TCKT
@@ -122,9 +121,9 @@
                                               Quản trị tài chính DN & đầu tư
                                           </p>
                                           <p class="col-1" style="text-align: right;">
-                                              <i class="fas fa-plus" style="color: blue;"></i>
-                                              <i class="fas fa-pencil-alt" style="color: yellow;"></i>
-                                              <i class="fas fa-trash-alt" style="color: red;"></i>
+                                            <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
+                                            <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
+                                            <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
                                           </p>
                                       </div>
                                   </a>
@@ -133,15 +132,15 @@
                                   <a href="#" style="text-decoration: none; color: black;">
                                       <div class="first-one-three-row d-flex">
                                           <p class="col-7">
-                                              <i class="fas fa-sitemap" style="color: #4493c9;"></i>Phòng Quản trị Nguồn nhân lực
+                                            <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon>Phòng Quản trị Nguồn nhân lực
                                           </p>
                                           <p class="col-1">QTNNL
                                           </p>
                                           <p class="col-3">Xây dựng hệ thống & các </p>
                                           <p class="col-1" style="text-align: right;">
-                                              <i class="fas fa-plus" style="color: blue;"></i>
-                                              <i class="fas fa-pencil-alt" style="color: yellow;"></i>
-                                              <i class="fas fa-trash-alt" style="color: red;"></i>
+                                            <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
+                                            <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
+                                            <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
                                           </p>
                                       </div>
                                   </a>
@@ -150,7 +149,7 @@
                                  <a href="#" style="text-decoration: none; color: black;">
                                   <div class="first-one-four-row d-flex">
                                       <p class="col-7">
-                                          <i class="fas fa-sitemap" style="color: #4493c9;"></i>
+                                        <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon>
                                           Phòng Marketing
                                       </p>
                                       <p class="col-1">
@@ -160,9 +159,9 @@
                                           Mô tả chung
                                       </p>
                                       <p class="col-1" style="text-align: right;">
-                                          <i class="fas fa-plus" style="color: blue;"></i>
-                                          <i class="fas fa-pencil-alt" style="color: yellow;"></i>
-                                          <i class="fas fa-trash-alt" style="color: red;"></i>
+                                        <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
+                                        <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
+                                        <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
                                       </p>
                                   </div>
                                  </a>
@@ -171,7 +170,7 @@
                                   <a href="#" style="text-decoration: none; color: black;">
                                       <div class="first-one-four-row d-flex">
                                           <p class="col-7">
-                                              <i class="fas fa-sitemap" style="color: #4493c9;"></i>Phòng R&D
+                                            <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon>Phòng R&D
                                           </p>
                                           <p class="col-1">
                                               RD
@@ -180,9 +179,9 @@
                                               Mô tả chung
                                           </p>
                                           <p class="col-1" style="text-align: right;">
-                                              <i class="fas fa-plus" style="color: blue;"></i>
-                                              <i class="fas fa-pencil-alt" style="color: yellow;"></i>
-                                              <i class="fas fa-trash-alt" style="color: red;"></i>
+                                            <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
+                                            <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
+                                            <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
                                           </p>
                                       </div>
                                   </a>
@@ -191,7 +190,7 @@
                                   <a href="#" style="text-decoration: none; color: black;">
                                       <div class="first-one-five-row d-flex">
                                           <p class="col-7">
-                                              <i class="fas fa-sitemap" style="color: #4493c9;"></i>Phòng Hành chính tổng hợp
+                                            <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon>Phòng Hành chính tổng hợp
                                           </p>
                                           <p class="col-1">
                                               HC
@@ -200,9 +199,9 @@
                                               Mô tả chung
                                           </p>
                                           <p class="col-1" style="text-align: right;">
-                                              <i class="fas fa-plus" style="color: blue;"></i>
-                                              <i class="fas fa-pencil-alt" style="color: yellow;"></i>
-                                              <i class="fas fa-trash-alt" style="color: red;"></i>
+                                            <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
+                                            <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
+                                            <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
                                           </p>
                                       </div>
                                   </a>
@@ -211,7 +210,7 @@
                                   <a href="#" style="text-decoration: none; color: black;">
                                       <div class="first-one-four-row d-flex">
                                           <p class="col-7">
-                                              <i class="fas fa-sitemap" style="color: #4493c9;"></i>Phòng Kỹ thuật
+                                            <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon>Phòng Kỹ thuật
                                           </p>
                                           <p class="col-1">
                                               BGD-1-7
@@ -220,9 +219,9 @@
                                               Mô tả chung
                                           </p>
                                           <p class="col-1" style="text-align: right;">
-                                              <i class="fas fa-plus" style="color: blue;"></i>
-                                              <i class="fas fa-pencil-alt" style="color: yellow;"></i>
-                                              <i class="fas fa-trash-alt" style="color: red;"></i>
+                                            <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
+                                            <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
+                                            <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
                                           </p>
                                       </div>
                                   </a>

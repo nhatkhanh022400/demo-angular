@@ -1,239 +1,209 @@
 <div class="structure-tree col-9">
 
   <div class="five-button">
-      <button><fa-icon [icon]="faSyncAlt" style="color: #1a6fdc;"></fa-icon>Refresh</button>
-      <button><a href="http://127.0.0.1:5500/popup.html" style="text-decoration: none; color: black;"><fa-icon [icon]="faPlus" style="color: #3f9c4b;"></fa-icon>Thêm mới</a></button>
-      <button><fa-icon [icon]="faFileExcel" style="color: #779576;"></fa-icon>Xuất file Exccel</button>
-      <button><fa-icon [icon]="faCloudDownloadAlt"></fa-icon>Tải file mẫu</button>
-      <button><fa-icon [icon]="faCloudDownloadAlt" style="color: #bb3b45;"></fa-icon>Import</button>
+
+    <button>
+      <a href="">
+        <fa-icon [icon]="faSyncAlt" style="color: #1a6fdc;"></fa-icon>
+        Refresh
+      </a>
+    </button>
+
+    <button style="margin-right: 5px;">
+      <a class="add-popup" href="#popup">
+        <fa-icon [icon]="faPlus" style="color: #3f9c4b;"></fa-icon>
+        Thêm mới
+      </a>
+    </button>
+    <div class="add-newpart" id="popup">
+      <!-- <form action="action_page.php">
+        <div class="title">
+          <p>Thêm mới bộ phận</p>
+        </div>
+        <div class="box">
+          <div class="first-last">
+            <div class="firtname">
+              Mã<br>
+              <input type="text" id="firstname">
+            </div>
+            <div class="lastname">
+              Tên<br>
+              <input type="text" id="lastname">
+            </div>
+          </div>
+
+          <br>
+          <span class="chi-nhanh"><input type="checkbox"> Chi nhánh</span>
+          <input type="checkbox" class="bo-phan"> Bộ Phận
+          <div class="father">
+            <br><span>Thuộc chi nhánh/bộ phận cha</span> <br>
+            <select id="cars" name="cars" aria-placeholder="Thuộc chi nhánh/bộ phận cha">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="fiat">Fiat</option>
+              <option value="audi">Audi</option>
+            </select>
+          </div>
+          <div class="all">
+            <br>Mô tả chức năng-nhiệm vụ <br>
+            <textarea name="message" rows="10" cols="30">Mô tả chung</textarea>
+          </div>
+          <div class="note">
+            <br>Ghi Chú
+            <br><input type="text">
+          </div>
+          <div class="number">
+            <br>Số thứ tự <br>
+            <input type="number">
+          </div>
+        </div>
+
+        <br>
+        <div class="click-button">
+          <button>
+            <a href="#">
+              <fa-icon [icon]="faTimesCircle"></fa-icon>Đóng
+            </a>
+          </button>
+          <button style="background-color: #34495e; color: white; border: 1px solid #34495e ;">
+            <fa-icon [icon]="faSave"></fa-icon>Lưu
+          </button>
+        </div>
+      </form> -->
+    </div>
+
+    <button>
+      <a href="">
+        <fa-icon [icon]="faFileExcel" style="color: #779576;"></fa-icon>
+        Xuất file Exccel
+      </a>
+    </button>
+
+    <button>
+      <a href="">
+        <fa-icon [icon]="faCloudDownloadAlt"></fa-icon>
+        Tải file mẫu
+      </a>
+    </button>
+
+    <button>
+      <a href="">
+        <fa-icon [icon]="faCloudDownloadAlt" style="color: #bb3b45;"></fa-icon>
+        Import
+      </a>
+    </button>
   </div>
-
+  <!-- ---------------------------------------tree view------------------------------------------------- -->
   <div class="tree">
-      <div class="structure">
+    <div class="structure">
+      <ul>
+        <li>
+
+          <a href="#" style="text-decoration: none; color: black;">
+            <div class="first-row d-flex">
+              <div class="note">Hệ thống quản lý trực tuyến OOC</div>
+              <p class="col-7">
+                <fa-icon [icon]="faChevronDown"></fa-icon>Hệ thống quản lý trực tuyến OOC
+              </p>
+              <p class="code col-1">Mã</p>
+              <p class="col-3">Mô tả chức năng - nhiệm vụ</p>
+              <p class="col-1 ">
+                <fa-icon [icon]="faPlus" style="color: blue; padding-top: 10px; float: right;"></fa-icon>
+              </p>
+            </div>
+          </a>
+
           <ul>
-              <li>
-
+            <li>
+              <a href="#" style="text-decoration: none; color: black;">
+                <div class="first-one-row d-flex">
+                  <p class="col-7">
+                    <fa-icon [icon]="faChevronDown"></fa-icon>
+                    <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon> Giám đốc
+                  </p>
+                  <p class="code-one col-1">
+                    BGD-1
+                  </p>
+                  <p class="col-3">
+                    Điều hành hoạt động doanh
+                  </p>
+                  <p class="col-1 float-end" style="text-align: right;">
+                    <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
+                    <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
+                    <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
+                  </p>
+                </div>
+              </a>
+              <ul>
+                <li>
                   <a href="#" style="text-decoration: none; color: black;">
-                      <div class="first-row d-flex">
-                          <div class="note">Hệ thống quản lý trực tuyến OOC</div>
-                          <p class="col-7"><fa-icon [icon]="faChevronDown"></fa-icon>Hệ thống quản lý trực tuyến OOC</p>
-                          <p class="code col-1">Mã</p>
-                          <p class="col-3">Mô tả chức năng - nhiệm vụ</p>
-                          <p class="col-1 "><fa-icon [icon]="faPlus" style="color: blue; padding-top: 10px; float: right;"></fa-icon></p>
-                      </div>
+                    <div class="first-one-one-row d-flex">
+                      <p class="col-7">
+                        <fa-icon [icon]="faChevronDown"></fa-icon>
+                        <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon> Phó giám đốc Phụ trách kinh doanh
+                      </p>
+                      <p class="col-1" style="transform: translateX(-10px);">
+                        BGD-2
+                      </p>
+                      <p class="col-3">
+                        Điều hành khối kinh doanh
+                      </p>
+                      <p class="col-1" style="text-align: right;">
+                        <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
+                        <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
+                        <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
+                      </p>
+                    </div>
                   </a>
-
                   <ul>
-                      <li>
-                          <a href="#" style="text-decoration: none; color: black;">
-                              <div class="first-one-row d-flex">
-                                  <p class="col-7">
-                                    <fa-icon [icon]="faChevronDown"></fa-icon>
-                                    <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon> Giám đốc
-                                  </p>
-                                  <p class="code-one col-1">
-                                      BGD-1
-                                  </p>
-                                  <p class="col-3">
-                                      Điều hành hoạt động doanh
-                                  </p>
-                                  <p class="col-1 float-end" style="text-align: right;">
-                                    <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
-                                    <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
-                                    <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
-                                  </p>
-                              </div>
-                          </a>
-                          <ul>
-                              <li>
-                                  <a href="#" style="text-decoration: none; color: black;">
-                                      <div class="first-one-one-row d-flex">
-                                          <p class="col-7">
-                                            <fa-icon [icon]="faChevronDown"></fa-icon>
-                                            <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon> Phó giám đốc Phụ trách kinh doanh
-                                          </p>
-                                          <p class="col-1">
-                                              BGD-2
-                                          </p>
-                                          <p class="col-3">
-                                              Điều hành khối kinh doanh
-                                          </p>
-                                          <p class="col-1" style="text-align: right;">
-                                            <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
-                                            <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
-                                            <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
-                                          </p>
-                                      </div>
-                                  </a>
-                                  <ul>
-                                      <li>
-                                          <a href="#" style="text-decoration: none; color: black;">
-                                              <div class="first-one-one-one-row d-flex">
-                                                  <p class="col-7">
-                                                    <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon>Phòng phát triển thị trường
-                                                  </p>
-                                                  <p class="code-three col-1">
-                                                      PTTT
-                                                  </p>
-                                                  <p class="col-3">
-                                                      Marketing, chính sách giá
-                                                  </p>
-                                                  <p class="col-1" style="text-align: right;">
-                                                    <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
-                                                    <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
-                                                    <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
-                                                  </p>
-                                              </div>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="#" style="text-decoration: none; color: black;">
-                                              <div class="first-one-one-two-row d-flex">
-                                                  <p class="col-7">
-                                                    <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon>Phòng Kinh doanh
-                                                  </p>
-                                                  <p class="code-four col-1">
-                                                      KD
-                                                  </p>
-                                                  <p class="col-3">
-                                                      Mô tả chung
-                                                  </p>
-                                                  <p class="col-1" style="text-align: right;">
-                                                    <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
-                                                    <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
-                                                    <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
-                                                  </p>
-                                              </div>
-                                          </a>
-                                      </li>
-                                  </ul>
-                              </li>
-                              <li>
-                                  <a href="#" style="text-decoration: none; color: black;">
-                                      <div class="first-one-two-row d-flex">
-                                          <p class="col-7">
-                                            <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon>Phòng Tài chính Kế Toán
-                                          </p>
-                                          <p class="col-1">
-                                              TCKT
-                                          </p>
-                                          <p class="col-3">
-                                              Quản trị tài chính DN & đầu tư
-                                          </p>
-                                          <p class="col-1" style="text-align: right;">
-                                            <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
-                                            <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
-                                            <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
-                                          </p>
-                                      </div>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#" style="text-decoration: none; color: black;">
-                                      <div class="first-one-three-row d-flex">
-                                          <p class="col-7">
-                                            <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon>Phòng Quản trị Nguồn nhân lực
-                                          </p>
-                                          <p class="col-1">QTNNL
-                                          </p>
-                                          <p class="col-3">Xây dựng hệ thống & các </p>
-                                          <p class="col-1" style="text-align: right;">
-                                            <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
-                                            <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
-                                            <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
-                                          </p>
-                                      </div>
-                                  </a>
-                              </li>
-                              <li>
-                                 <a href="#" style="text-decoration: none; color: black;">
-                                  <div class="first-one-four-row d-flex">
-                                      <p class="col-7">
-                                        <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon>
-                                          Phòng Marketing
-                                      </p>
-                                      <p class="col-1">
-                                          MK
-                                      </p>
-                                      <p class="col-3">
-                                          Mô tả chung
-                                      </p>
-                                      <p class="col-1" style="text-align: right;">
-                                        <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
-                                        <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
-                                        <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
-                                      </p>
-                                  </div>
-                                 </a>
-                              </li>
-                              <li>
-                                  <a href="#" style="text-decoration: none; color: black;">
-                                      <div class="first-one-four-row d-flex">
-                                          <p class="col-7">
-                                            <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon>Phòng R&D
-                                          </p>
-                                          <p class="col-1">
-                                              RD
-                                          </p>
-                                          <p class="col-3">
-                                              Mô tả chung
-                                          </p>
-                                          <p class="col-1" style="text-align: right;">
-                                            <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
-                                            <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
-                                            <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
-                                          </p>
-                                      </div>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#" style="text-decoration: none; color: black;">
-                                      <div class="first-one-five-row d-flex">
-                                          <p class="col-7">
-                                            <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon>Phòng Hành chính tổng hợp
-                                          </p>
-                                          <p class="col-1">
-                                              HC
-                                          </p>
-                                          <p class="col-3">
-                                              Mô tả chung
-                                          </p>
-                                          <p class="col-1" style="text-align: right;">
-                                            <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
-                                            <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
-                                            <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
-                                          </p>
-                                      </div>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#" style="text-decoration: none; color: black;">
-                                      <div class="first-one-four-row d-flex">
-                                          <p class="col-7">
-                                            <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon>Phòng Kỹ thuật
-                                          </p>
-                                          <p class="col-1">
-                                              BGD-1-7
-                                          </p>
-                                          <p class="col-3">
-                                              Mô tả chung
-                                          </p>
-                                          <p class="col-1" style="text-align: right;">
-                                            <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
-                                            <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
-                                            <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
-                                          </p>
-                                      </div>
-                                  </a>
-
-                              </li>
-                          </ul>
-                      </li>
+                    <li *ngFor="let treeSmall of treeSmalls">
+                      <a href="#" style="text-decoration: none; color: black;">
+                        <div class="first-one-one-one-row d-flex">
+                          <p class="col-7">
+                            <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon>{{treeSmall.room}}
+                          </p>
+                          <p class="code-three col-1" style="transform: translateX(-25px);">
+                            {{treeSmall.code}}
+                          </p>
+                          <p class="col-3" style="transform: translateX(-12px);">
+                            {{treeSmall.mission}}
+                          </p>
+                          <p class="col-1" style="text-align: right;">
+                            <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
+                            <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
+                            <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
+                          </p>
+                        </div>
+                      </a>
+                    </li>
                   </ul>
-              </li>
+                </li>
 
+                <li *ngFor="let treeView of treeViews">
+                  <a href="#" style="text-decoration: none; color: black;">
+                    <div class="first-one-two-row d-flex">
+                      <p class="col-7">
+                        <fa-icon [icon]="faSitemap" style="color: #4493c9;"></fa-icon>{{treeView.room}}
+                      </p>
+                      <p class="col-1" style="transform: translateX(-10px);">
+                        {{treeView.code}}
+                      </p>
+                      <p class="col-3">
+                        {{treeView.mission}}
+                      </p>
+                      <p class="col-1" style="text-align: right;">
+                        <fa-icon [icon]="faPlus" style="color: blue;"></fa-icon>
+                        <fa-icon [icon]="faPencilAlt" style="color: yellow;"></fa-icon>
+                        <fa-icon [icon]="faTrashAlt" style="color: red;"></fa-icon>
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
           </ul>
-      </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
-

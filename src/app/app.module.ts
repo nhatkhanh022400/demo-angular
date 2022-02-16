@@ -6,6 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavLeftComponent } from './components/nav-left/nav-left.component';
 import { TreeRightComponent } from './components/tree-right/tree-right.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
 
   ],
   providers: [],

@@ -3,80 +3,24 @@
   <nav class="side-menu">
       <div class="menu">
           <ul>
-              <li>
-                  <a href="#" style="color: #9973b3; font-weight: bold;">Thiết lập chung
-                    <fa-icon [icon]="faChevronDown" style="float: right;" ></fa-icon>
+              <li *ngFor="let navMenu of navMenus; let i = index">
+                  <a href="#" style="color: #9973b3; font-weight: bold;">{{navMenu.sildeOne}}
+                    <!-- <fa-icon [icon]="faChevronDown" style="float: right;" ></fa-icon> -->
+                    <fa-icon [ngClass]="navMenu.fontOne + ' fa'" style="float: right;" ></fa-icon>
                   </a>
 
                   <ul style="background-color: white; padding: 10px 0 10px 25px; margin: 10px 0;">
                       <li>
-                          <a href="#" ><fa-icon [icon]="faBuilding"></fa-icon>Thông tin công ty</a>
+                          <!-- <a href="#" ><fa-icon [icon]="faBuilding"></fa-icon>{{navMenu.sildeTwo}}</a> -->
+                          <a href="#"><fa-icon  [ngClass]="navMenu.fontTwo + ' fa'" style="color: #000000;"></fa-icon>{{navMenu.sildeTwo}}</a>
                       </li>
 
                       <li>
-                          <a href="#" ><fa-icon [icon]="faDollarSign" style="font-size: 13px; color: red;"></fa-icon>Tình trạng hợp đồng</a>
+                          <a href="#" *ngIf="navMenu.sildeThree != undefined"><fa-icon [ngClass]="navMenu.fontThree + ' fa'" style="font-size: 13px; color: red;"></fa-icon>{{navMenu.sildeThree}}</a>
                       </li>
                   </ul>
               </li>
 
-              <li>
-                  <a href="#" style="color: #9973b3; font-weight: bold;">Quản Trị Hệ Thống
-                    <fa-icon [icon]="faChevronDown" style="float: right;"></fa-icon>
-                  </a>
-
-                  <ul style="background-color: white; padding: 10px 0 10px 25px; margin: 10px 0;">
-                      <li>
-                          <a href="#" ><fa-icon [icon]="faUser" style="font-size: 13px; color: green;"></fa-icon>Nhân sự</a>
-                      </li>
-
-                      <li>
-                          <a href="#" ><fa-icon [icon]="faUser" style="font-size: 13px; color: rgb(219, 219, 77);"></fa-icon>Vai Trò</a>
-                      </li>
-                  </ul>
-              </li>
-
-              <li>
-                  <a href="#" style="color: #9973b3; font-weight: bold;">Thiết lập dữ liệu bắt buộc
-                    <fa-icon [icon]="faChevronDown" style="float: right;"></fa-icon>
-                  </a>
-
-                  <ul style="background-color: white;padding: 10px 0 10px 25px; margin: 10px 0;">
-                      <li>
-                          <a href="#" ><fa-icon [icon]="faSitemap" style="font-size: 13px; color: blue;"></fa-icon>Cơ cấu tổ chức</a>
-                      </li>
-
-                      <li>
-                          <a href="#" ><fa-icon [icon]="faStreetView" style="font-size: 13px; color: green;"></fa-icon>Cơ cấu chức danh</a>
-                      </li>
-                  </ul>
-              </li>
-
-              <li>
-                  <a href="#" style="color: #9973b3; font-weight: bold;">Thiết lập cho hệ thống cơ cấu tổ chức<fa-icon [icon]="faChevronDown" style="float: right;"></fa-icon>
-                  </a>
-
-                  <ul style="background-color: white; padding: 10px 0 10px 25px; margin: 10px 0;">
-                      <li>
-                          <a href="#" ><fa-icon [icon]="faFileAlt" style="font-size: 13px; "></fa-icon>Biểu mẫu bảng MTCV</a>
-                      </li>
-                  </ul>
-              </li>
-
-              <li>
-                  <a href="#" style="color: #9973b3; font-weight: bold;">Thiết lập cho hệ thống đánh giá n.lực<fa-icon [icon]="faChevronDown" style="float: right;"></fa-icon>
-
-                  </a>
-
-                  <ul style="background-color: white; padding: 10px 0 10px 25px; margin: 10px 0;">
-                      <li>
-                          <a href="#" ><fa-icon [icon]="faCogs" style="font-size: 13px; color: blue;"></fa-icon>Cấu hình công ty</a>
-                      </li>
-
-                      <li>
-                          <a href="#" ><fa-icon [icon]="faEnvelope" style="font-size: 13px; color: blue;"></fa-icon>Biểu mẫu Email</a>
-                      </li>
-                  </ul>
-              </li>
           </ul>
       </div>
   </nav>

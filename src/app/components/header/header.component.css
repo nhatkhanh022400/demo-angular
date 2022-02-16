@@ -12,7 +12,9 @@
 
 .option-right a{
   text-decoration: none;
-  padding: 0 15px;
+  padding: 0 20px;
+  font-size: 20px;
+  color: black;
 }
 
 .option-right a i{

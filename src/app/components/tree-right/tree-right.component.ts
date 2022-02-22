@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵɵqueryRefresh } from '@angular/core';
 import { faChevronDown, faFileExcel, faCloudDownloadAlt, faUpload, faPlus, faSyncAlt, faSitemap , faPencilAlt, faTrashAlt, faTimesCircle, faSave} from '@fortawesome/free-solid-svg-icons';
 
 
@@ -59,6 +59,36 @@ export class TreeRightComponent implements OnInit {
       mission: 'Mô tả chung'
     }
 
+  ]
+
+  fiveButtons = [
+    {
+      name: 'Refresh',
+      margins: 'margin',
+      icon: 'bi bi-arrow-clockwise',
+      color: 'colorBlue'
+    },
+    {
+      name: 'Thêm mới',
+      margins: 'margin',
+      icon: 'bi bi-plus',
+      color: 'colorGreen'
+    },
+    {
+      name: 'Xuất file Excel',
+      icon: 'bi bi-file-earmark-excel',
+      color: 'colorGreen'
+    },
+    {
+      name: 'Tải file mẫu',
+      icon: 'bi bi-cloud-arrow-down-fill',
+      color: 'colorBlack'
+    },
+    {
+      name: 'Import',
+      icon: 'bi bi-arrow-bar-up',
+      color: 'colorRed'
+    }
   ]
 
   buttoms = [

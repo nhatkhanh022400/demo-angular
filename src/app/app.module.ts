@@ -16,11 +16,11 @@ import { FormsModule } from '@angular/forms';
     TreeRightComponent
   ],
   imports: [
+    FontAwesomeModule,
+    FormsModule,
+
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule,
-    FormsModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]

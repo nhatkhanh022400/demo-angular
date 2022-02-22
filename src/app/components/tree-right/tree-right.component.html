@@ -1,98 +1,15 @@
 <div class="structure-tree col-9">
 
   <div class="five-button">
+    <!-- *ngIf="fiveButton.margins != undefined" [ngClass]="fiveButton.margins" -->
 
-    <button>
+    <button *ngFor="let fiveButton of fiveButtons" >
       <a href="">
-        <fa-icon [icon]="faSyncAlt" style="color: #1a6fdc;"></fa-icon>
-        Refresh
+        <i class="{{fiveButton.icon}}" [ngClass]="fiveButton.color"></i>
+        {{fiveButton.name}}
       </a>
     </button>
-
-    <button style="margin-right: 5px;">
-      <a class="add-popup" href="#popup">
-        <fa-icon [icon]="faPlus" style="color: #3f9c4b;"></fa-icon>
-        Thêm mới
-      </a>
-    </button>
-    <div class="add-newpart" id="popup">
-      <!-- <form action="action_page.php">
-        <div class="title">
-          <p>Thêm mới bộ phận</p>
-        </div>
-        <div class="box">
-          <div class="first-last">
-            <div class="firtname">
-              Mã<br>
-              <input type="text" id="firstname">
-            </div>
-            <div class="lastname">
-              Tên<br>
-              <input type="text" id="lastname">
-            </div>
-          </div>
-
-          <br>
-          <span class="chi-nhanh"><input type="checkbox"> Chi nhánh</span>
-          <input type="checkbox" class="bo-phan"> Bộ Phận
-          <div class="father">
-            <br><span>Thuộc chi nhánh/bộ phận cha</span> <br>
-            <select id="cars" name="cars" aria-placeholder="Thuộc chi nhánh/bộ phận cha">
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="fiat">Fiat</option>
-              <option value="audi">Audi</option>
-            </select>
-          </div>
-          <div class="all">
-            <br>Mô tả chức năng-nhiệm vụ <br>
-            <textarea name="message" rows="10" cols="30">Mô tả chung</textarea>
-          </div>
-          <div class="note">
-            <br>Ghi Chú
-            <br><input type="text">
-          </div>
-          <div class="number">
-            <br>Số thứ tự <br>
-            <input type="number">
-          </div>
-        </div>
-
-        <br>
-        <div class="click-button">
-          <button>
-            <a href="#">
-              <fa-icon [icon]="faTimesCircle"></fa-icon>Đóng
-            </a>
-          </button>
-          <button style="background-color: #34495e; color: white; border: 1px solid #34495e ;">
-            <fa-icon [icon]="faSave"></fa-icon>Lưu
-          </button>
-        </div>
-      </form> -->
-    </div>
-
-    <button>
-      <a href="">
-        <fa-icon [icon]="faFileExcel" style="color: #779576;"></fa-icon>
-        Xuất file Exccel
-      </a>
-    </button>
-
-    <button>
-      <a href="">
-        <fa-icon [icon]="faCloudDownloadAlt"></fa-icon>
-        Tải file mẫu
-      </a>
-    </button>
-
-    <button>
-      <a href="">
-        <fa-icon [icon]="faCloudDownloadAlt" style="color: #bb3b45;"></fa-icon>
-        Import
-      </a>
-    </button>
-  </div>
+</div>
   <!-- ---------------------------------------tree view------------------------------------------------- -->
   <div class="tree">
     <div class="structure">
@@ -108,10 +25,65 @@
               <p class="code col-1">Mã</p>
               <p class="col-3">Mô tả chức năng - nhiệm vụ</p>
               <p class="col-1 ">
-                <fa-icon [icon]="faPlus" style="color: blue; padding-top: 10px; float: right;"></fa-icon>
+                <a href="#popup">
+                  <fa-icon [icon]="faPlus" style="color: blue; padding-top: 10px; float: right;"></fa-icon>
+                </a>
               </p>
             </div>
           </a>
+
+          <!-- ---------------------------popup-------------------------------- -->
+    <div class="add-newpart" id="popup">
+      <div class="detail-popup">
+        <div class="title">
+          <p>Thêm mới bộ phận</p>
+        </div>
+
+        <div class="main-popup">
+          <div class="code-name">
+            <div class="code">
+              <p>Mã</p>
+              <input type="text">
+            </div>
+            <div class="name">
+              <p>Tên</p>
+              <input type="text">
+            </div>
+          </div>
+          <input type="radio" id="chinhanh" name="chinhanh1" value="ChiNhanh" style="width: 17px; height: 17px;">
+          <label for="chinhanh" style="transform: translateY(-3px);">Chi nhánh</label>
+
+          <input type="radio" id="bophan" name="bophan1" value="BoPhan" style="margin-left: 77px; width: 17px; height: 17px;">
+          <label for="bophan" style="transform: translateY(-3px);">Bộ Phận</label>
+
+          <p style="margin-bottom: 5px; margin-top: 11px;">Thuộc chi nhánh/bộ phận cha</p>
+          <select name="" id="" style="width: 420px; padding: 3px; border-radius: 3px; margin-bottom: 12px; border: 1px solid #e5e6e8;">
+            <option value="">Chi nhánh/bộ phận cha</option>
+          </select>
+          <p style="margin-bottom: 3px;">Mô tả chức năng-nhiệm vụ</p>
+          <textarea name="" id="" cols="63" rows="2" placeholder="Mô tả chung..." style="border-radius: 3px;border: 1px solid #e5e6e8;"></textarea>
+          <p style="margin-bottom: 3px;">Ghi chú</p>
+          <textarea name="" id="" cols="63" rows="2" style="border-radius: 3px; border: 1px solid #e5e6e8;"></textarea>
+          <p style="margin-bottom: 3px;">Số thứ tự</p>
+          <input type="number" placeholder="2" style="width: 100px; padding: 3px; border-radius: 3px; border: 1px solid #e5e6e8;">
+        </div>
+
+        <div class="footer-popup">
+          <button style="border: 1px solid #f0f3f5;">
+            <a href="#" style="color: #34495e;">
+              <fa-icon [icon]="faTimesCircle"></fa-icon>Đóng
+            </a>
+          </button>
+          <button style="background-color: #34495e; margin-left: 5px;">
+            <a href="#" style="color: #ffffff;">
+              <fa-icon [icon]="faSave"></fa-icon>Lưu
+            </a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ----------------------------------------------------------------------------------------------------- -->
 
           <ul>
             <li>
@@ -206,4 +178,4 @@
       </ul>
     </div>
   </div>
-</div>
+

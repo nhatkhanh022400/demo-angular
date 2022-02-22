@@ -3,20 +3,27 @@
   <nav class="side-menu">
       <div class="menu">
           <ul>
-              <li *ngFor="let navMenu of navMenus; let i = index">
+              <li *ngFor="let navMenu of navMenus;">
                   <a href="#" style="color: #9973b3; font-weight: bold;">{{navMenu.sildeOne}}
                     <!-- <fa-icon [icon]="faChevronDown" style="float: right;" ></fa-icon> -->
-                    <fa-icon [ngClass]="navMenu.fontOne + ' fa'" style="float: right;" ></fa-icon>
+                    <!-- <fa-icon [ngClass]="navMenu.fontOne + ' fa'" style="float: right;" ></fa-icon> -->
+                    <!-- <i class="bi bi-chevron-down" style="float: right;"></i> -->
+
+                    <i class="bi bi-chevron-down" style="float: right;"></i>
                   </a>
 
                   <ul style="background-color: white; padding: 10px 0 10px 25px; margin: 10px 0;">
                       <li>
                           <!-- <a href="#" ><fa-icon [icon]="faBuilding"></fa-icon>{{navMenu.sildeTwo}}</a> -->
-                          <a href="#"><fa-icon  [ngClass]="navMenu.fontTwo + ' fa'" style="color: #000000;"></fa-icon>{{navMenu.sildeTwo}}</a>
+                          <a href="#"><i class="{{navMenu.fontTwo}}" [ngClass]="navMenu.colorTwo"></i>{{navMenu.sildeTwo}}</a>
+                          <!-- <a href="#">
+                            <i class="bi bi-currency-dollar"></i>{{navMenu.sildeTwo}}
+                          </a> -->
                       </li>
 
                       <li>
-                          <a href="#" *ngIf="navMenu.sildeThree != undefined"><fa-icon [ngClass]="navMenu.fontThree + ' fa'" style="font-size: 13px; color: red;"></fa-icon>{{navMenu.sildeThree}}</a>
+                          <a href="#" *ngIf="navMenu.sildeThree != undefined">
+                            <i class="{{navMenu.fontThree}}" [ngClass]="navMenu.colorThree" *ngIf="navMenu.colorThree != undefined"></i>{{navMenu.sildeThree}}</a>
                       </li>
                   </ul>
               </li>
@@ -25,3 +32,4 @@
       </div>
   </nav>
 </div>
+

@@ -13,50 +13,50 @@ export class NavLeftComponent implements OnInit {
     {
       sildeOne: 'Thiết lập chung',
       // fontOne: faChevronDown as IconProp,
-      fontOne: 'fa-chevron-down',
+
       sildeTwo: 'Thông Tin Công Ty',
-      fontTwo: 'fa-building',
-      colorTwo: '#18a1b4',
+      fontTwo: 'bi bi-building',
+      colorTwo: 'colorBlue',
       sildeThree: 'Tình Trạng Hợp Đồng',
-      fontThree: 'fa-usd',
-      colorThree: 'color: red'
+      fontThree: 'bi bi-currency-dollar',
+      colorThree: 'colorRed'
     },
     {
       sildeOne: 'Quản trị hệ thống',
-      fontOne: 'fa-chevron-down',
+
       sildeTwo: 'Nhân Sự',
-      fontTwo: 'fa-user',
-      colorTwo: 'style="color: #2ba747"',
+      fontTwo: 'bi bi-person-fill',
+      colorTwo: 'colorGreen',
       sildeThree: 'Vai trò',
-      fontThree: 'fa-users',
-      colorThree: 'style="color: #fbc110"'
+      fontThree: 'bi bi-people-fill',
+      colorThree: 'colorYellow'
     },
     {
       sildeOne: 'Thiết lập dữ liệu bắt buộc',
-      fontOne: 'fa-chevron-down',
+
       sildeTwo: 'Cơ Cấu Tổ Chức',
-      fontTwo: 'fa-sitemap',
-      colorTwo: 'style="color: #40919f"',
+      fontTwo: 'bi bi-diagram-3-fill',
+      colorTwo: 'colorBlue',
       sildeThree: 'Cơ Cấu Chức Danh',
-      fontThree: 'fa-street-view',
-      colorThree: 'style="color: #2ba747"'
+      fontThree: 'bi bi-person-workspace',
+      colorThree: 'colorGreen'
     },
     {
       sildeOne: 'Thiết lập hệ thống cơ cấu tổ chức',
-      fontOne: 'fa-chevron-down',
+
       sildeTwo: 'Biểu mẫu bảng MTCV',
-      fontTwo: 'fa-file-text-o',
-      colorTwo: 'style="color: #aeb5bb"',
+      fontTwo: 'bi bi-file-earmark-text',
+      colorTwo: 'colorSliver',
     },
     {
       sildeOne: 'Thiết lập cho hệ thống đánh giá n.lực',
-      fontOne: 'fa-chevron-down',
+
       sildeTwo: 'Cấu hình công ty',
-      fontTwo: 'fa-cogs',
-      colorTwo: 'style="color: #18a1b4"',
+      fontTwo: 'bi bi-gear-fill',
+      colorTwo: 'colorBlue',
       sildeThree: 'Biểu mẫu Email',
-      fontThree: 'fa-envelope',
-      colorThree: 'style="color: #18a1b4"'
+      fontThree: 'bi bi-envelope-fill',
+      colorThree: 'colorBlue'
     },
 
   ]
@@ -68,14 +68,14 @@ export class NavLeftComponent implements OnInit {
   ngOnInit(): void {
     // this.myfaChevronDown = faChevronDown
   }
-  faChevronDown = faChevronDown;
-  faBuilding = faBuilding;
-  faDollarSign = faDollarSign;
-  faUser = faUser;
-  faSitemap = faSitemap;
-  faStreetView = faStreetView;
-  faFileAlt = faFileAlt;
-  faCogs = faCogs;
-  faEnvelope = faEnvelope;
+  // faChevronDown = faChevronDown;
+  // faBuilding = faBuilding;
+  // faDollarSign = faDollarSign;
+  // faUser = faUser;
+  // faSitemap = faSitemap;
+  // faStreetView = faStreetView;
+  // faFileAlt = faFileAlt;
+  // faCogs = faCogs;
+  // faEnvelope = faEnvelope;
 
 }

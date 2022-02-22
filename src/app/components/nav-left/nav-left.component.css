@@ -5,7 +5,7 @@
   height: 100%;
   left: 0;
   font-size: 13.5px;
-  padding: 30px 1.5rem 10px 5px;
+  padding: 30px 1.5rem 10px 0.5rem;
 }
 
 .menu ul li{
@@ -15,6 +15,18 @@
 
 .menu ul li a{
   text-decoration: none;
+}
+
+.menu i{
+  margin-right: 2px;
+}
+
+.menu .bi-chevron-down{
+  transition: transform linear 0.2s;
+}
+
+.menu .bi-chevron-down:hover{
+  transform: rotateZ(180deg);
 }
 
 .menu ul li ul li a{
@@ -31,6 +43,26 @@
 
 fa-icon{
   margin-right: 5px;
+}
+/* ----------------------ngClass------------------------ */
+.colorBlue{
+  color: #519eb5;
+}
+
+.colorRed{
+  color: #a93226;
+}
+
+.colorGreen{
+  color: #2aa843;
+}
+
+.colorYellow{
+  color: #f6c328;
+}
+
+.colorSliver{
+  color: #99a3b3;
 }
 
 

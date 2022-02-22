@@ -16,6 +16,11 @@
   padding:  3px 10px;
 }
 
+.five-button button a{
+  text-decoration: none;
+  color: black;
+}
+
 .tree{
   color: #575e6e;
 }
@@ -69,10 +74,6 @@
 
 }
 
-.first-row,.first-one-row, .first-one-one-row, .first-one-one-one-row, .first-one-two-row p{
-
-}
-
 .first-row:hover{
   background-color:#d1d3ec ;
 }
@@ -117,42 +118,107 @@ fa-icon{
 
 }
 /* ----------------------------------popup------------------------------------------------------ */
-.add-popup{
-  text-decoration: none;
-  color: black;
-}
-.title{
-  width: 100%;
-}
-.title p{
-  font-size: 30px;
-  padding:  10px 1.5rem;
-  background-color: #f7f9fa;
-  height: 3rem;
-}
 
-.add-newpart{
-  width: 25rem;
-  height: 28.5rem;
-  background-color: white;
+#popup{
+  background-color: rgba(0, 0, 0, 0.397);
   position: fixed;
-  /* top: 0;
+  top: 0;
   left: 0;
   right: 0;
-  bottom: 0; */
+  bottom: 0;
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
   visibility: hidden;
   opacity: 0;
-  transition: opacity linear 0.3s;
+  transition: opacity linear 0.5s;
 }
 
-.add-newpart:target{
+#popup:target{
   visibility: visible;
   opacity: 1;
 }
 
+.detail-popup{
+  width: 30rem;
+  height: 33rem;
+  background-color: #ffffff;
+  text-align: left;
+}
+
+.detail-popup .title{
+  width: 100%;
+  font-size: 30px;
+  padding: 12px 0 1px 30px;
+  background-color: #f7f9fa;
+  border-bottom: 1px solid #f0f3f5;
+}
+
+.main-popup{
+  padding: 12px 30px 12px 30px;
+}
+
+.code-name{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.code input{
+  width: 140px;
+  padding: 3px;
+  border-radius: 3px;
+  margin-right: 10px;
+  border: 1px solid #e5e6e8;
+}
+
+.code p{
+  margin-bottom: 5px;
+}
+.name input{
+  width:270px;
+  padding: 3px;
+  border-radius: 3px;
+  border: 1px solid #e5e6e8;
+}
+
+.name p{
+  margin-bottom: 5px;
+}
+
+.footer-popup{
+  background-color: #f7f9fa;
+  text-align: right;
+  padding: 0 30px 12px 30px;
+  border-top: 1px solid #f0f3f5;
+}
+
+.footer-popup button{
+  border-radius: 3px;
+}
+
+.footer-popup a{
+  text-decoration: none;
+}
+/* ---------------------------------------------ngClass-------------------------------------- */
+.colorBlue{
+  color: #519eb5;
+}
+
+.colorGreen{
+  color: #2aa843;
+}
+
+.colorRed{
+  color: #a93226;
+}
+
+.colorBlack{
+  color: #000000;
+}
+
+.margin{
+  margin-right: 5px;
+}
 
 

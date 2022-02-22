@@ -1,5 +1,5 @@
 import { Component, OnInit, ɵɵqueryRefresh } from '@angular/core';
-import { faChevronDown, faFileExcel, faCloudDownloadAlt, faUpload, faPlus, faSyncAlt, faSitemap , faPencilAlt, faTrashAlt, faTimesCircle, faSave} from '@fortawesome/free-solid-svg-icons';
+
 
 
 @Component({
@@ -98,16 +98,6 @@ export class TreeRightComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  faChevronDown = faChevronDown;
-  faPlus = faPlus;
-  faFileExcel = faFileExcel;
-  faCloudDownloadAlt = faCloudDownloadAlt;
-  faUpload = faUpload;
-  faSyncAlt = faSyncAlt;
-  faSitemap = faSitemap;
-  faPencilAlt = faPencilAlt;
-  faTrashAlt = faTrashAlt;
-  faTimesCircle = faTimesCircle;
-  faSave = faSave;
+
 
 }

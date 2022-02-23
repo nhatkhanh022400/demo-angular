@@ -1,9 +1,10 @@
 .structure-tree{
   background-color: #eaebef;
-  padding: 3rem 1rem;
-  min-width: 1175px;
+  padding: 0 1rem 3rem 1rem;
+  min-width: 143%;
   font-size: 13.5px;
   width: 80%;
+  height: 100%;
 }
 
 .five-button{
@@ -281,6 +282,7 @@ fa-icon{
 
 .code p{
   margin-bottom: 5px;
+  font-weight: bold;
 }
 .name input{
   width:270px;
@@ -291,6 +293,7 @@ fa-icon{
 
 .name p{
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .chi-bo{
@@ -359,7 +362,7 @@ fa-icon{
 
 .footer-popup a i{
   font-size: 13px;
-  margin-right: 2px;
+  margin-right: 5px;
   transform: translateY(-1px);
   display: inline-block;
 }
@@ -367,6 +370,8 @@ fa-icon{
 .bi-x-circle::before{
   font-weight: 900 !important;
 }
+
+
 
 
 

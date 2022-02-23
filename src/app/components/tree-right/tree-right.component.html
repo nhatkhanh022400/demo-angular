@@ -5,7 +5,7 @@
 
     <button *ngFor="let fiveButton of fiveButtons"
       [ngStyle]="{'margin-right': fiveButton.margins, 'border-radius': '1px'}">
-      <a href="">
+      <a href="{{fiveButton.popup}}">
         <i class="{{fiveButton.icon}}"
           [ngStyle]="{'color': fiveButton.color,'font-size': '15px','display': 'inline-block', 'transform': 'translateY(1.5px)'}"></i>
         {{fiveButton.name}}
@@ -18,21 +18,21 @@
       <ul *ngFor="let treeView of treeViews">
         <li>
 
-          <a href="#" style="text-decoration: none; color: black;">
+
             <div class="first-row d-flex">
               <div class="note">{{treeView.note}}</div>
-              <p class="col-7" style="transform: translateY(10px);">
+              <p class="col-7" style="transform: translateY(8px);">
                 <i class="bi bi-chevron-down" style="display: inline-block; margin-right: 7px;"></i>{{treeView.room}}
               </p>
-              <p class="code col-1" style="transform: translateY(10px);">{{treeView.code}}</p>
-              <p class="col-3" style="transform: translateY(10px);">{{treeView.mission}}</p>
+              <p class="code col-1" style="transform: translateY(8px);">{{treeView.code}}</p>
+              <p class="col-3" style="transform: translateY(8px);">{{treeView.mission}}</p>
               <p class="col-1 ">
                 <a href="#popup">
-                  <i class="bi bi-plus-lg" style="color: blue; padding-top: 10px; float: right;"></i>
+                  <i class="bi bi-plus-lg" style="color: blue; padding-top: 2px; float: right; transform: translateY(8px);"></i>
                 </a>
               </p>
             </div>
-          </a>
+
 
           <!-- ---------------------------popup-------------------------------- -->
           <div class="add-newpart" id="popup">
@@ -45,7 +45,7 @@
                 <div class="code-name">
                   <div class="code">
                     <p>Mã</p>
-                    <input type="text">
+                    <input type="text" >
                   </div>
                   <div class="name">
                     <p>Tên</p>
@@ -80,24 +80,24 @@
                 </select>
                 <p style="margin-bottom: 3px;">Mô tả chức năng-nhiệm vụ</p>
                 <textarea name="" id="" cols="62" rows="2" placeholder="Mô tả chung..."
-                  style="border-radius: 3px;border: 1px solid #e5e6e8; padding-left: 5px;"></textarea>
+                  style="border-radius: 3px;border: 1px solid #e5e6e8; padding: 3px 0 3px 5px;"></textarea>
                 <p style="margin-bottom: 3px;">Ghi chú</p>
                 <textarea name="" id="" cols="62" rows="2"
-                  style="border-radius: 3px; border: 1px solid #e5e6e8;padding-left: 5px;"></textarea>
+                  style="border-radius: 3px; border: 1px solid #e5e6e8; padding: 3px 0 3px 5px;"></textarea>
                 <p style="margin-bottom: 3px;">Số thứ tự</p>
                 <input type="number" placeholder="2" min="1"
-                  style="width: 100px; padding: 3px; border-radius: 3px; border: 1px solid #e5e6e8;">
+                  style="width: 100px; padding: 5px; border-radius: 3px; border: 1px solid #e5e6e8;">
               </div>
 
               <div class="footer-popup">
                 <button style="border: 1px solid #f0f3f5; background-color: #ffffff;">
                   <a href="#" style="color: #34495e;">
-                    <i class="bi bi-x-circle"></i>Đóng
+                    <i class="bi bi-x-circle"></i><span style="transform: translateY(-1px); display: inline-block;">Đóng</span>
                   </a>
                 </button>
                 <button style="background-color: #34495e; margin-left: 5px;">
                   <a href="#" style="color: #ffffff;">
-                    <i class="bi bi-save-fill"></i>Lưu
+                    <i class="bi bi-save-fill"></i><span style="transform: translateY(-1px); display: inline-block;">Lưu</span>
                   </a>
                 </button>
               </div>
@@ -108,7 +108,7 @@
 
           <ul>
             <li *ngFor="let treeView of treeView.spaceOne">
-              <a href="#" style="text-decoration: none; color: black;">
+
                 <div class="first-one-row d-flex">
                   <div class="note1">{{treeView.note}}</div>
                   <p class="col-7" style="transform: translateY(8px);">
@@ -124,15 +124,21 @@
                   </p>
                   <p class="col-1 float-end" style="text-align: right; transform: translateY(8px);">
 
-                    <i class="bi bi-plus-lg" style="color: blue; margin-right: 3px; display: inline-block;"></i>
-                    <i class="bi bi-pencil-fill" style="color: yellow; margin-right: 3px; display: inline-block;"></i>
-                    <i class="bi bi-trash-fill" style="color: red; margin-right: 3px; display: inline-block;"></i>
+                    <a href="#popup">
+                      <i class="bi bi-plus-lg" style="color: blue; margin-right: 3px; display: inline-block;"></i>
+                    </a>
+                    <a href="#">
+                      <i class="bi bi-pencil-fill" style="color: yellow; margin-right: 3px; display: inline-block;"></i>
+                    </a>
+                    <a href="#">
+                      <i class="bi bi-trash-fill" style="color: red; margin-right: 3px; display: inline-block;"></i>
+                    </a>
                   </p>
                 </div>
-              </a>
+
               <ul>
                 <li *ngFor="let tree of treeView.spaceTwo">
-                  <a href="#" style="text-decoration: none; color: black;">
+
                     <div class="first-one-one-row d-flex">
                       <div class="note2">{{tree.note}}</div>
                       <p class="col-7" style="transform: translateY(8px);">
@@ -147,16 +153,21 @@
                         {{tree.mission}}
                       </p>
                       <p class="col-1" style="text-align: right; transform: translateY(8px);">
-                        <i class="bi bi-plus-lg" style="color: blue; margin-right: 3px; display: inline-block;"></i>
-                        <i class="bi bi-pencil-fill"
-                          style="color: yellow; margin-right: 3px; display: inline-block;"></i>
-                        <i class="bi bi-trash-fill" style="color: red; margin-right: 3px; display: inline-block;"></i>
+                        <a href="#popup">
+                          <i class="bi bi-plus-lg" style="color: blue; margin-right: 3px; display: inline-block;"></i>
+                        </a>
+                        <a href="#">
+                          <i class="bi bi-pencil-fill" style="color: yellow; margin-right: 3px; display: inline-block;"></i>
+                        </a>
+                        <a href="#">
+                          <i class="bi bi-trash-fill" style="color: red; margin-right: 3px; display: inline-block;"></i>
+                        </a>
                       </p>
                     </div>
-                  </a>
+
                   <ul>
                     <li *ngFor="let treeView of tree.spaceThree">
-                      <a href="#" style="text-decoration: none; color: black;">
+
                         <div class="first-one-one-one-row d-flex">
                           <div class="note3">{{treeView.note}}</div>
                           <p class="col-7" style="transform: translateY(8px);">
@@ -170,14 +181,18 @@
                             {{treeView.mission}}
                           </p>
                           <p class="col-1" style="text-align: right; transform: translateY(8px);">
-                            <i class="bi bi-plus-lg" style="color: blue; margin-right: 3px; display: inline-block;"></i>
-                            <i class="bi bi-pencil-fill"
-                              style="color: yellow; margin-right: 3px; display: inline-block;"></i>
-                            <i class="bi bi-trash-fill"
-                              style="color: red; margin-right: 3px; display: inline-block;"></i>
+                            <a href="#popup">
+                              <i class="bi bi-plus-lg" style="color: blue; margin-right: 3px; display: inline-block;"></i>
+                            </a>
+                            <a href="#">
+                              <i class="bi bi-pencil-fill" style="color: yellow; margin-right: 3px; display: inline-block;"></i>
+                            </a>
+                            <a href="#">
+                              <i class="bi bi-trash-fill" style="color: red; margin-right: 3px; display: inline-block;"></i>
+                            </a>
                           </p>
                         </div>
-                      </a>
+
                     </li>
                   </ul>
                 </li>

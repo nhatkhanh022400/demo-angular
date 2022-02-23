@@ -4,21 +4,17 @@
       <div class="menu">
           <ul>
               <li *ngFor="let navMenu of navMenus;">
-                  <a href="#" style="color: #9973b3; font-weight: bold;">{{navMenu.sildeOne}}
-                    <!-- <fa-icon [icon]="faChevronDown" style="float: right;" ></fa-icon> -->
-                    <!-- <fa-icon [ngClass]="navMenu.fontOne + ' fa'" style="float: right;" ></fa-icon> -->
-                    <!-- <i class="bi bi-chevron-down" style="float: right;"></i> -->
+                  <span style="color: #9973b3; font-weight: bold;" >{{navMenu.sildeOne}}
+
 
                     <i class="bi bi-chevron-down" style="float: right;"></i>
-                  </a>
+                  </span>
 
                   <ul style="background-color: white; padding: 10px 0 10px 25px; margin: 10px 0;">
                       <li>
-                          <!-- <a href="#" ><fa-icon [icon]="faBuilding"></fa-icon>{{navMenu.sildeTwo}}</a> -->
+
                           <a href="#"><i class="{{navMenu.fontTwo}}" [ngStyle]="{'color': navMenu.colorTwo, 'margin-right': '5px'}"></i>{{navMenu.sildeTwo}}</a>
-                          <!-- <a href="#">
-                            <i class="bi bi-currency-dollar"></i>{{navMenu.sildeTwo}}
-                          </a> -->
+
                       </li>
 
                       <li>

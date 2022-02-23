@@ -112,7 +112,8 @@ export class TreeRightComponent implements OnInit {
           name: 'Thêm mới',
           margins: '5px',
           icon: 'bi bi-plus-lg',
-          color: '#2aa843'
+          color: '#2aa843',
+          popup: '#popup'
         },
         {
           name: 'Xuất file Excel',

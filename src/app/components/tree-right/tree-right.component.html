@@ -20,7 +20,7 @@
 
           <a href="#" style="text-decoration: none; color: black;">
             <div class="first-row d-flex">
-              <div class="note">Hệ thống quản lý trực tuyến OOC</div>
+              <div class="note">{{treeView.note}}</div>
               <p class="col-7" style="transform: translateY(10px);">
                 <i class="bi bi-chevron-down" style="display: inline-block; margin-right: 7px;"></i>{{treeView.room}}
               </p>
@@ -54,7 +54,7 @@
                 </div>
                 <div class="chi-bo">
                   <input type="radio" id="chinhanh" name="chinhanh1" value="ChiNhanh"
-                    style="width: 17px; height: 17px;">
+                    style="width: 17px; height: 17px; margin-right: 5px;">
                   <Span class="checking">
                     <img
                       src="https://congchung5sao.vn/wp-content/uploads/2021/07/thiet-ke-logo_3_-removebg-previewb-300x300.png"
@@ -62,7 +62,7 @@
                   <label for="chinhanh" style="transform: translateY(-3px);">Chi nhánh</label>
 
                   <input type="radio" id="bophan" name="chinhanh1" value="BoPhan"
-                    style="margin-left: 77px; width: 17px; height: 17px;">
+                    style="margin-left: 77px; width: 17px; height: 17px; margin-right: 5px;">
                   <Span class="checking"><img
                       src="https://congchung5sao.vn/wp-content/uploads/2021/07/thiet-ke-logo_3_-removebg-previewb-300x300.png"
                       alt="check" class="check-right"></Span>
@@ -85,7 +85,7 @@
                 <textarea name="" id="" cols="62" rows="2"
                   style="border-radius: 3px; border: 1px solid #e5e6e8;padding-left: 5px;"></textarea>
                 <p style="margin-bottom: 3px;">Số thứ tự</p>
-                <input type="number" placeholder="2"
+                <input type="number" placeholder="2" min="1"
                   style="width: 100px; padding: 3px; border-radius: 3px; border: 1px solid #e5e6e8;">
               </div>
 
@@ -110,6 +110,7 @@
             <li *ngFor="let treeView of treeView.spaceOne">
               <a href="#" style="text-decoration: none; color: black;">
                 <div class="first-one-row d-flex">
+                  <div class="note1">{{treeView.note}}</div>
                   <p class="col-7" style="transform: translateY(8px);">
                     <i class="bi bi-chevron-down"></i>
                     <i class="bi bi-diagram-3-fill" style="color: #4493c9; display: inline-block; margin: 0 5px;"></i>
@@ -133,6 +134,7 @@
                 <li *ngFor="let tree of treeView.spaceTwo">
                   <a href="#" style="text-decoration: none; color: black;">
                     <div class="first-one-one-row d-flex">
+                      <div class="note2">{{tree.note}}</div>
                       <p class="col-7" style="transform: translateY(8px);">
                         <i class="{{tree.font}}"></i>
                         <i class="bi bi-diagram-3-fill"
@@ -156,6 +158,7 @@
                     <li *ngFor="let treeView of tree.spaceThree">
                       <a href="#" style="text-decoration: none; color: black;">
                         <div class="first-one-one-one-row d-flex">
+                          <div class="note3">{{treeView.note}}</div>
                           <p class="col-7" style="transform: translateY(8px);">
                             <i class="bi bi-diagram-3-fill"
                               style="color: #4493c9;display: inline-block; margin: 0 5px;"></i>{{treeView.room}}

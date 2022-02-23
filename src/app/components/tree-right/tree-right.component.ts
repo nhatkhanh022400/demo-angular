@@ -12,22 +12,26 @@ export class TreeRightComponent implements OnInit {
   treeViews = [
       {
         room: 'Hệ thống tư vấn quản lý trực tập',
+        note: 'Hệ thống tư vấn quản lý trực tập',
         code: 'Mã',
         mission: 'Mô tả chức năng nhiệm vụ',
         spaceOne: [
           {
             room: 'Giám đốc',
+            note: 'Giám đốc',
             code: 'BGD-1',
             mission: 'Điều hành hoạt động doanh nghệp',
             spaceTwo:[
               {
                 room: 'Phó giám đốc Phụ trách kinh doanh',
+                note: 'Phó giám đốc Phụ trách kinh doanh',
                 code: 'BGD-2',
                 mission: 'Điều hành hoạt động doanh nghệp',
                 font: 'bi bi-chevron-down',
                 spaceThree:[
                   {
                     room: 'Phòng phát triển thị trường',
+                    note: 'Phòng phát triển thị trường',
                     code: 'PTTT',
                     mission: 'Marketting',
                     space:[]
@@ -35,6 +39,7 @@ export class TreeRightComponent implements OnInit {
 
                   {
                     room: 'Phòng Kinh doanh',
+                    note: 'Phòng Kinh doanh',
                     code: 'KD',
                     mission: 'Mô tả chung...',
                     space:[]
@@ -44,6 +49,7 @@ export class TreeRightComponent implements OnInit {
 
               {
                 room: 'Phòng Tài chính Kế toán',
+                note: 'Phòng Tài chính Kế toán',
                 code: 'TCKT',
                 mission: 'Quản trị Tài chính',
 
@@ -51,6 +57,7 @@ export class TreeRightComponent implements OnInit {
 
               {
                 room: 'Phòng Quản trị nguồn nhân lực',
+                note: 'Phòng Quản trị nguồn nhân lực',
                 code: 'QTNNL',
                 mission: 'Xây dựng hệ thống & các chính sách',
 
@@ -58,6 +65,7 @@ export class TreeRightComponent implements OnInit {
 
               {
                 room: 'Phòng Marketing',
+                note: 'Phòng Marketing',
                 code: 'MK',
                 mission: 'Mô tả chung...',
 
@@ -65,6 +73,7 @@ export class TreeRightComponent implements OnInit {
 
               {
                 room: 'Phòng R&D',
+                note: 'Phòng R&D',
                 code: 'RD',
                 mission: 'Mô tả chung...',
 
@@ -72,6 +81,7 @@ export class TreeRightComponent implements OnInit {
 
               {
                 room: 'Phòng Hành chính tổng hợp',
+                note: 'Phòng Hành chính tổng hợp',
                 code: 'HC',
                 mission: 'Mô tả chung...',
 
@@ -79,6 +89,7 @@ export class TreeRightComponent implements OnInit {
 
               {
                 room: 'Phòng Kỹ thuật',
+                note: 'Phòng Kỹ thuật',
                 code: 'BGD-1-7',
                 mission: 'Mô tả chung...',
 

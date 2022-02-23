@@ -1,8 +1,9 @@
 .structure-tree{
   background-color: #eaebef;
   padding: 3rem 1rem;
-  min-width: 1220px;
+  min-width: 1175px;
   font-size: 13.5px;
+  width: 80%;
 }
 
 .five-button{
@@ -26,7 +27,7 @@
 }
 
 .structure{
-  padding: 2rem ;
+  padding: 1rem 1rem 1rem 0;
   background-color: white;
 }
 
@@ -68,9 +69,8 @@
 
 .first-row,.first-one-row, .first-one-one-row, .first-one-one-one-row, .first-one-two-row{
   background-color: #e5e5f1;
-  /* row-gap: 2px; */
   margin-top: 5px;
-  padding: 0 5px 0 20px;
+  padding: 0 5px 0 0;
 
 }
 
@@ -87,12 +87,20 @@
   padding-left: 30px;
 }
 
+.first-one-row:hover{
+  background-color:#d1d3ec ;
+}
+
 .first-one-row .code-one{
   padding-left: 15px;
 }
 
 .first-one-row .col-3{
   padding-left: 20px;
+}
+
+.first-one-one-row:hover{
+  background-color:#d1d3ec ;
 }
 
 .first-one-one-row .col-3{
@@ -102,8 +110,17 @@
 .first-one-one-two-row .code-four{
   transform: translateX(-12px);
 }
+
+.first-one-one-one-row:hover{
+  background-color:#d1d3ec ;
+}
+
 .first-one-one-one-row .code-three{
   transform: translateX(-12px);
+}
+
+.first-one-two-row:hover{
+  background-color:#d1d3ec ;
 }
 
 .first-one-two-row .col-3, .first-one-three-row .col-3, .first-one-four-row .col-3, .first-one-five-row .col-3  {
@@ -186,6 +203,47 @@ fa-icon{
   margin-bottom: 5px;
 }
 
+.chi-bo{
+  position: relative;
+
+}
+
+.checking .check-left{
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  bottom: 14px;
+  left: 0px;
+}
+
+.chi-bo #chinhanh ~ .checking .check-left{
+  opacity: 0;
+  display: none;
+}
+
+.chi-bo #chinhanh:checked ~ .checking .check-left{
+  opacity: 1;
+  display: block;
+}
+
+.checking .check-right{
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  bottom: 14px;
+  right: 250px;
+}
+
+.chi-bo #bophan ~ .checking .check-right{
+  opacity: 0;
+  display: none;
+}
+
+.chi-bo #bophan:checked ~ .checking .check-right{
+  opacity: 1;
+  display: block;
+}
+
 .footer-popup{
   background-color: #f7f9fa;
   text-align: right;
@@ -197,8 +255,8 @@ fa-icon{
 
 .footer-popup button{
   border-radius: 3px;
-  margin-top: 1.5rem;
-  padding: 2px 5px;
+  margin-top: 1.1rem;
+  padding: 4px 10px;
 }
 
 .footer-popup a{
@@ -211,6 +269,9 @@ fa-icon{
   transform: translateY(-1px);
   display: inline-block;
 }
+
+
+
 
 
 

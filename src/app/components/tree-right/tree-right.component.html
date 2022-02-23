@@ -3,27 +3,29 @@
   <div class="five-button">
 
 
-    <button *ngFor="let fiveButton of fiveButtons" [ngStyle]="{'margin-right': fiveButton.margins}" >
+    <button *ngFor="let fiveButton of fiveButtons"
+      [ngStyle]="{'margin-right': fiveButton.margins, 'border-radius': '1px'}">
       <a href="">
-        <i class="{{fiveButton.icon}}" [ngStyle]="{'color': fiveButton.color}"></i>
+        <i class="{{fiveButton.icon}}"
+          [ngStyle]="{'color': fiveButton.color,'font-size': '15px','display': 'inline-block', 'transform': 'translateY(1.5px)'}"></i>
         {{fiveButton.name}}
       </a>
     </button>
-</div>
+  </div>
   <!-- ---------------------------------------tree view------------------------------------------------- -->
   <div class="tree">
     <div class="structure">
-      <ul>
+      <ul *ngFor="let treeView of treeViews">
         <li>
 
           <a href="#" style="text-decoration: none; color: black;">
             <div class="first-row d-flex">
               <div class="note">Hệ thống quản lý trực tuyến OOC</div>
-              <p class="col-7">
-                <i class="bi bi-chevron-down"></i>Hệ thống quản lý trực tuyến OOC
+              <p class="col-7" style="transform: translateY(10px);">
+                <i class="bi bi-chevron-down" style="display: inline-block; margin-right: 7px;"></i>{{treeView.room}}
               </p>
-              <p class="code col-1">Mã</p>
-              <p class="col-3">Mô tả chức năng - nhiệm vụ</p>
+              <p class="code col-1" style="transform: translateY(10px);">{{treeView.code}}</p>
+              <p class="col-3" style="transform: translateY(10px);">{{treeView.mission}}</p>
               <p class="col-1 ">
                 <a href="#popup">
                   <i class="bi bi-plus-lg" style="color: blue; padding-top: 10px; float: right;"></i>
@@ -33,144 +35,148 @@
           </a>
 
           <!-- ---------------------------popup-------------------------------- -->
-    <div class="add-newpart" id="popup">
-      <div class="detail-popup">
-        <div class="title">
-          <p>Thêm mới bộ phận</p>
-        </div>
+          <div class="add-newpart" id="popup">
+            <div class="detail-popup">
+              <div class="title">
+                <p>Thêm mới bộ phận</p>
+              </div>
 
-        <div class="main-popup">
-          <div class="code-name">
-            <div class="code">
-              <p>Mã</p>
-              <input type="text">
-            </div>
-            <div class="name">
-              <p>Tên</p>
-              <input type="text">
+              <div class="main-popup">
+                <div class="code-name">
+                  <div class="code">
+                    <p>Mã</p>
+                    <input type="text">
+                  </div>
+                  <div class="name">
+                    <p>Tên</p>
+                    <input type="text">
+                  </div>
+                </div>
+                <div class="chi-bo">
+                  <input type="radio" id="chinhanh" name="chinhanh1" value="ChiNhanh"
+                    style="width: 17px; height: 17px;">
+                  <Span class="checking">
+                    <img
+                      src="https://congchung5sao.vn/wp-content/uploads/2021/07/thiet-ke-logo_3_-removebg-previewb-300x300.png"
+                      alt="check" class="check-left"></Span>
+                  <label for="chinhanh" style="transform: translateY(-3px);">Chi nhánh</label>
+
+                  <input type="radio" id="bophan" name="chinhanh1" value="BoPhan"
+                    style="margin-left: 77px; width: 17px; height: 17px;">
+                  <Span class="checking"><img
+                      src="https://congchung5sao.vn/wp-content/uploads/2021/07/thiet-ke-logo_3_-removebg-previewb-300x300.png"
+                      alt="check" class="check-right"></Span>
+                  <label for="bophan" style="transform: translateY(-3px);">Bộ Phận</label>
+                </div>
+
+                <div class="chi-bo">
+
+                </div>
+
+                <p style="margin-bottom: 5px; margin-top: 11px;">Thuộc chi nhánh/bộ phận cha</p>
+                <select name="" id=""
+                  style="width: 420px; padding: 3px; border-radius: 3px; margin-bottom: 12px; border: 1px solid #e5e6e8; color: rgb(142, 142, 142);">
+                  <option value="">Chi nhánh/bộ phận cha</option>
+                </select>
+                <p style="margin-bottom: 3px;">Mô tả chức năng-nhiệm vụ</p>
+                <textarea name="" id="" cols="62" rows="2" placeholder="Mô tả chung..."
+                  style="border-radius: 3px;border: 1px solid #e5e6e8; padding-left: 5px;"></textarea>
+                <p style="margin-bottom: 3px;">Ghi chú</p>
+                <textarea name="" id="" cols="62" rows="2"
+                  style="border-radius: 3px; border: 1px solid #e5e6e8;padding-left: 5px;"></textarea>
+                <p style="margin-bottom: 3px;">Số thứ tự</p>
+                <input type="number" placeholder="2"
+                  style="width: 100px; padding: 3px; border-radius: 3px; border: 1px solid #e5e6e8;">
+              </div>
+
+              <div class="footer-popup">
+                <button style="border: 1px solid #f0f3f5; background-color: #ffffff;">
+                  <a href="#" style="color: #34495e;">
+                    <i class="bi bi-x-circle"></i>Đóng
+                  </a>
+                </button>
+                <button style="background-color: #34495e; margin-left: 5px;">
+                  <a href="#" style="color: #ffffff;">
+                    <i class="bi bi-save-fill"></i>Lưu
+                  </a>
+                </button>
+              </div>
             </div>
           </div>
-          <input type="radio" id="chinhanh" name="chinhanh1" value="ChiNhanh" style="width: 17px; height: 17px;">
-          <label for="chinhanh" style="transform: translateY(-3px);">Chi nhánh</label>
 
-          <input type="radio" id="bophan" name="bophan1" value="BoPhan" style="margin-left: 77px; width: 17px; height: 17px;">
-          <label for="bophan" style="transform: translateY(-3px);">Bộ Phận</label>
-
-          <p style="margin-bottom: 5px; margin-top: 11px;">Thuộc chi nhánh/bộ phận cha</p>
-          <select name="" id="" style="width: 420px; padding: 3px; border-radius: 3px; margin-bottom: 12px; border: 1px solid #e5e6e8;">
-            <option value="">Chi nhánh/bộ phận cha</option>
-          </select>
-          <p style="margin-bottom: 3px;">Mô tả chức năng-nhiệm vụ</p>
-          <textarea name="" id="" cols="63" rows="2" placeholder="Mô tả chung..." style="border-radius: 3px;border: 1px solid #e5e6e8;"></textarea>
-          <p style="margin-bottom: 3px;">Ghi chú</p>
-          <textarea name="" id="" cols="63" rows="2" style="border-radius: 3px; border: 1px solid #e5e6e8;"></textarea>
-          <p style="margin-bottom: 3px;">Số thứ tự</p>
-          <input type="number" placeholder="2" style="width: 100px; padding: 3px; border-radius: 3px; border: 1px solid #e5e6e8;">
-        </div>
-
-        <div class="footer-popup">
-          <button style="border: 1px solid #f0f3f5;">
-            <a href="#" style="color: #34495e;">
-              <i class="bi bi-x-circle"></i>Đóng
-            </a>
-          </button>
-          <button style="background-color: #34495e; margin-left: 5px;">
-            <a href="#" style="color: #ffffff;">
-              <i class="bi bi-save-fill"></i>Lưu
-            </a>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- ----------------------------------------------------------------------------------------------------- -->
+          <!-- ----------------------------------------------------------------------------------------------------- -->
 
           <ul>
-            <li>
+            <li *ngFor="let treeView of treeView.spaceOne">
               <a href="#" style="text-decoration: none; color: black;">
                 <div class="first-one-row d-flex">
-                  <p class="col-7">
+                  <p class="col-7" style="transform: translateY(8px);">
                     <i class="bi bi-chevron-down"></i>
-                    <i class="bi bi-diagram-3-fill" style="color: #4493c9;"></i> Giám đốc
+                    <i class="bi bi-diagram-3-fill" style="color: #4493c9; display: inline-block; margin: 0 5px;"></i>
+                    {{treeView.room}}
                   </p>
-                  <p class="code-one col-1">
-                    BGD-1
+                  <p class="code-one col-1" style="transform: translateY(8px);">
+                    {{treeView.code}}
                   </p>
-                  <p class="col-3">
-                    Điều hành hoạt động doanh
+                  <p class="col-3" style="transform: translateY(8px);">
+                    {{treeView.mission}}
                   </p>
-                  <p class="col-1 float-end" style="text-align: right;">
+                  <p class="col-1 float-end" style="text-align: right; transform: translateY(8px);">
 
-                    <i class="bi bi-plus-lg" style="color: blue;"></i>
-                    <i class="bi bi-pencil-fill" style="color: yellow;"></i>
-                    <i class="bi bi-trash-fill" style="color: red;"></i>
+                    <i class="bi bi-plus-lg" style="color: blue; margin-right: 3px; display: inline-block;"></i>
+                    <i class="bi bi-pencil-fill" style="color: yellow; margin-right: 3px; display: inline-block;"></i>
+                    <i class="bi bi-trash-fill" style="color: red; margin-right: 3px; display: inline-block;"></i>
                   </p>
                 </div>
               </a>
               <ul>
-                <li>
+                <li *ngFor="let tree of treeView.spaceTwo">
                   <a href="#" style="text-decoration: none; color: black;">
                     <div class="first-one-one-row d-flex">
-                      <p class="col-7">
-                        <i class="bi bi-chevron-down"></i>
-                        <i class="bi bi-diagram-3-fill" style="color: #4493c9;"></i> Phó giám đốc Phụ trách kinh doanh
+                      <p class="col-7" style="transform: translateY(8px);">
+                        <i class="{{tree.font}}"></i>
+                        <i class="bi bi-diagram-3-fill"
+                          style="color: #4493c9;display: inline-block; margin: 0 5px;"></i> {{tree.room}}
                       </p>
-                      <p class="col-1" style="transform: translateX(-10px);">
-                        BGD-2
+                      <p class="col-1" style="transform: translate(-13px, 8px);">
+                        {{tree.code}}
                       </p>
-                      <p class="col-3">
-                        Điều hành khối kinh doanh
+                      <p class="col-3" style="transform: translateY(8px);">
+                        {{tree.mission}}
                       </p>
-                      <p class="col-1" style="text-align: right;">
-                        <i class="bi bi-plus-lg" style="color: blue;"></i>
-                        <i class="bi bi-pencil-fill" style="color: yellow;"></i>
-                        <i class="bi bi-trash-fill" style="color: red;"></i>
+                      <p class="col-1" style="text-align: right; transform: translateY(8px);">
+                        <i class="bi bi-plus-lg" style="color: blue; margin-right: 3px; display: inline-block;"></i>
+                        <i class="bi bi-pencil-fill"
+                          style="color: yellow; margin-right: 3px; display: inline-block;"></i>
+                        <i class="bi bi-trash-fill" style="color: red; margin-right: 3px; display: inline-block;"></i>
                       </p>
                     </div>
                   </a>
                   <ul>
-                    <li *ngFor="let treeSmall of treeSmalls">
+                    <li *ngFor="let treeView of tree.spaceThree">
                       <a href="#" style="text-decoration: none; color: black;">
                         <div class="first-one-one-one-row d-flex">
-                          <p class="col-7">
-                            <i class="bi bi-diagram-3-fill" style="color: #4493c9;"></i>{{treeSmall.room}}
+                          <p class="col-7" style="transform: translateY(8px);">
+                            <i class="bi bi-diagram-3-fill"
+                              style="color: #4493c9;display: inline-block; margin: 0 5px;"></i>{{treeView.room}}
                           </p>
-                          <p class="code-three col-1" style="transform: translateX(-25px);">
-                            {{treeSmall.code}}
+                          <p class="code-three col-1" style="transform: translate(-25px, 8px);">
+                            {{treeView.code}}
                           </p>
-                          <p class="col-3" style="transform: translateX(-12px);">
-                            {{treeSmall.mission}}
+                          <p class="col-3" style="transform: translate(-12px, 8px);">
+                            {{treeView.mission}}
                           </p>
-                          <p class="col-1" style="text-align: right;">
-                            <i class="bi bi-plus-lg" style="color: blue;"></i>
-                            <i class="bi bi-pencil-fill" style="color: yellow;"></i>
-                            <i class="bi bi-trash-fill" style="color: red;"></i>
+                          <p class="col-1" style="text-align: right; transform: translateY(8px);">
+                            <i class="bi bi-plus-lg" style="color: blue; margin-right: 3px; display: inline-block;"></i>
+                            <i class="bi bi-pencil-fill"
+                              style="color: yellow; margin-right: 3px; display: inline-block;"></i>
+                            <i class="bi bi-trash-fill"
+                              style="color: red; margin-right: 3px; display: inline-block;"></i>
                           </p>
                         </div>
                       </a>
                     </li>
                   </ul>
-                </li>
-
-                <li *ngFor="let treeView of treeViews">
-                  <a href="#" style="text-decoration: none; color: black;">
-                    <div class="first-one-two-row d-flex">
-                      <p class="col-7">
-                        <i class="bi bi-diagram-3-fill" style="color: #4493c9;"></i>{{treeView.room}}
-                      </p>
-                      <p class="col-1" style="transform: translateX(-10px);">
-                        {{treeView.code}}
-                      </p>
-                      <p class="col-3">
-                        {{treeView.mission}}
-                      </p>
-                      <p class="col-1" style="text-align: right;">
-                        <i class="bi bi-plus-lg" style="color: blue;"></i>
-                        <i class="bi bi-pencil-fill" style="color: yellow;"></i>
-                        <i class="bi bi-trash-fill" style="color: red;"></i>
-                      </p>
-                    </div>
-                  </a>
                 </li>
               </ul>
             </li>
@@ -179,4 +185,3 @@
       </ul>
     </div>
   </div>
-

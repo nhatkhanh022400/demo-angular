@@ -15,7 +15,7 @@
                   <ul style="background-color: white; padding: 10px 0 10px 25px; margin: 10px 0;">
                       <li>
                           <!-- <a href="#" ><fa-icon [icon]="faBuilding"></fa-icon>{{navMenu.sildeTwo}}</a> -->
-                          <a href="#"><i class="{{navMenu.fontTwo}}" [ngClass]="navMenu.colorTwo"></i>{{navMenu.sildeTwo}}</a>
+                          <a href="#"><i class="{{navMenu.fontTwo}}" [ngStyle]="{'color': navMenu.colorTwo}"></i>{{navMenu.sildeTwo}}</a>
                           <!-- <a href="#">
                             <i class="bi bi-currency-dollar"></i>{{navMenu.sildeTwo}}
                           </a> -->
@@ -23,7 +23,7 @@
 
                       <li>
                           <a href="#" *ngIf="navMenu.sildeThree != undefined">
-                            <i class="{{navMenu.fontThree}}" [ngClass]="navMenu.colorThree" *ngIf="navMenu.colorThree != undefined"></i>{{navMenu.sildeThree}}</a>
+                            <i class="{{navMenu.fontThree}}" *ngIf="navMenu.colorThree != undefined" [ngStyle]="{'color': navMenu.colorThree}" ></i>{{navMenu.sildeThree}}</a>
                       </li>
                   </ul>
               </li>

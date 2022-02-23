@@ -1,11 +1,11 @@
 <div class="structure-tree col-9">
 
   <div class="five-button">
-    <!-- *ngIf="fiveButton.margins != undefined" [ngClass]="fiveButton.margins" -->
 
-    <button *ngFor="let fiveButton of fiveButtons" >
+
+    <button *ngFor="let fiveButton of fiveButtons" [ngStyle]="{'margin-right': fiveButton.margins}" >
       <a href="">
-        <i class="{{fiveButton.icon}}" [ngClass]="fiveButton.color"></i>
+        <i class="{{fiveButton.icon}}" [ngStyle]="{'color': fiveButton.color}"></i>
         {{fiveButton.name}}
       </a>
     </button>
@@ -71,7 +71,7 @@
         <div class="footer-popup">
           <button style="border: 1px solid #f0f3f5;">
             <a href="#" style="color: #34495e;">
-              <i class="bi bi-x-circle-fill"></i>Đóng
+              <i class="bi bi-x-circle"></i>Đóng
             </a>
           </button>
           <button style="background-color: #34495e; margin-left: 5px;">

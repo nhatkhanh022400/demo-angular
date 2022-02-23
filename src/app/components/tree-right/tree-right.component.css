@@ -191,34 +191,26 @@ fa-icon{
   text-align: right;
   padding: 0 30px 12px 30px;
   border-top: 1px solid #f0f3f5;
+  width: 100%;
+  height: 4rem;
 }
 
 .footer-popup button{
   border-radius: 3px;
+  margin-top: 1.5rem;
+  padding: 2px 5px;
 }
 
 .footer-popup a{
   text-decoration: none;
 }
-/* ---------------------------------------------ngClass-------------------------------------- */
-.colorBlue{
-  color: #519eb5;
+
+.footer-popup a i{
+  font-size: 10px;
+  margin-right: 2px;
+  transform: translateY(-1px);
+  display: inline-block;
 }
 
-.colorGreen{
-  color: #2aa843;
-}
-
-.colorRed{
-  color: #a93226;
-}
-
-.colorBlack{
-  color: #000000;
-}
-
-.margin{
-  margin-right: 5px;
-}
 
 

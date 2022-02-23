@@ -64,30 +64,29 @@ export class TreeRightComponent implements OnInit {
   fiveButtons = [
     {
       name: 'Refresh',
-      margins: 'margin',
       icon: 'bi bi-arrow-clockwise',
-      color: 'colorBlue'
+      color: '#519eb5'
     },
     {
       name: 'Thêm mới',
-      margins: 'margin',
+      margins: '5px',
       icon: 'bi bi-plus',
-      color: 'colorGreen'
+      color: '#2aa843'
     },
     {
       name: 'Xuất file Excel',
       icon: 'bi bi-file-earmark-excel',
-      color: 'colorGreen'
+      color: '#2aa843'
     },
     {
       name: 'Tải file mẫu',
       icon: 'bi bi-cloud-arrow-down-fill',
-      color: 'colorBlack'
+      color: '#000000'
     },
     {
       name: 'Import',
       icon: 'bi bi-arrow-bar-up',
-      color: 'colorRed'
+      color: '#a93226'
     }
   ]
 

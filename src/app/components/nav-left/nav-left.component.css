@@ -21,11 +21,11 @@
   margin-right: 2px;
 }
 
-.menu .bi-chevron-down{
+.menu .bi-chevron-up{
   transition: transform linear 0.2s;
 }
 
-.menu .bi-chevron-down:hover{
+.menu .bi-chevron-up:hover{
   transform: rotateZ(180deg);
 }
 

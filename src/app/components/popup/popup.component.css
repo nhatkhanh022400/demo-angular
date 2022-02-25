@@ -54,7 +54,7 @@
   font-weight: bold;
 }
 .name input{
-  width:270px;
+  width:350px;
   padding: 5px;
   border-radius: 3px;
   border: 1px solid #e5e6e8;
@@ -78,6 +78,10 @@
   left: -1.5px;
 }
 
+#chinhanh{
+  transform: translateY(1px);
+}
+
 .chi-bo #chinhanh ~ .checking .check-left{
   opacity: 0;
   display: none;
@@ -89,7 +93,7 @@
 }
 
 #bophan{
-  transform: translateX(-9px);
+  transform: translate(-20px, 1px);
 }
 
 .checking .check-right{

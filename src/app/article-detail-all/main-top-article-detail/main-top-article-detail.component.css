@@ -1,0 +1,13 @@
+.layout-one{
+  padding: 40px 100px 60px 100px;
+  display: flex;
+}
+
+.layout-left{
+  width: 818px;
+  margin-right: 60px;
+}
+
+.layout-left{
+  letter-spacing: 1.5px;
+}

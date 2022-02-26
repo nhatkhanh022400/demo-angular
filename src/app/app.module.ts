@@ -1,27 +1,26 @@
+import { AllMdModule } from './all-article/all-md/all-md.module';
+import { ArticalDetailModule } from './article-detail-all/artical-detail-md/artical-detail.module';
+import { DemoModule } from './components/demo/demo.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { NavLeftComponent } from './components/nav-left/nav-left.component';
-import { TreeRightComponent } from './components/tree-right/tree-right.component';
-import { FormsModule } from '@angular/forms';
-import { PopupComponent } from './components/popup/popup.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    NavLeftComponent,
-    TreeRightComponent,
-    PopupComponent
+
   ],
   imports: [
-
-    FormsModule,
-
+    DemoModule,
+    AllMdModule,
     BrowserModule,
     AppRoutingModule,
+    ArticalDetailModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

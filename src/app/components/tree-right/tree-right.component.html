@@ -5,7 +5,7 @@
 
     <button *ngFor="let fiveButton of fiveButtons"
       [ngStyle]="{'margin-right': fiveButton.margins, 'border-radius': '1px'}">
-      <a href="{{fiveButton.popup}}">
+      <a (click)="fiveButton.popup">
         <i class="{{fiveButton.icon}}"
           [ngStyle]="{'color': fiveButton.color,'font-size': '15px','display': 'inline-block', 'transform': 'translateY(1.5px)'}"></i>
         {{fiveButton.name}}
@@ -28,17 +28,11 @@
               <p class="col-3" style="transform: translateY(8px); overflow: hidden;
               text-overflow: ellipsis; white-space: nowrap; width: 265px;">{{treeView.mission}}</p>
               <p class="col-1 ">
-                <a href="#popup">
+                <a  (click)="openPopup()">
                   <i class="bi bi-plus-lg" style="color: blue; padding-top: 2px; float: right; transform: translate(15px, 8px);"></i>
                 </a>
               </p>
             </div>
-
-
-          <!-- ---------------------------popup-------------------------------- -->
-
-
-          <!-- ----------------------------------------------------------------------------------------------------- -->
 
           <ul>
             <li *ngFor="let treeView of treeView.spaceOne">
@@ -59,7 +53,7 @@
                   </p>
                   <p class="col-1 float-end" style="text-align: right; transform: translate(17px, 8px);">
 
-                    <a href="#popup">
+                    <a (click)="openPopup()">
                       <i class="bi bi-plus-lg" style="color: blue; margin-right: 3px; display: inline-block;"></i>
                     </a>
                     <a href="#">
@@ -89,7 +83,7 @@
                         {{tree.mission}}
                       </p>
                       <p class="col-1" style="text-align: right; transform: translate(17px,8px);">
-                        <a href="#popup">
+                        <a (click)="openPopup()">
                           <i class="bi bi-plus-lg" style="color: blue; margin-right: 3px; display: inline-block;"></i>
                         </a>
                         <a href="#">
@@ -118,7 +112,7 @@
                             {{treeView.mission}}
                           </p>
                           <p class="col-1" style="text-align: right; transform: translate(17px, 8px);">
-                            <a href="#popup">
+                            <a (click)="openPopup()">
                               <i class="bi bi-plus-lg" style="color: blue; margin-right: 3px; display: inline-block;"></i>
                             </a>
                             <a href="#">

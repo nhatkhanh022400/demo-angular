@@ -1,0 +1,22 @@
+<div class="layout-two">
+
+  <div class="title-page">
+      <div class="title-layout">Related Articles</div>
+
+      <div class="articles-page">
+          <img src="assets/img/Group179.svg" alt="">
+          <img src="assets/img/Group179.svg" alt="">
+
+      </div>
+  </div>
+
+
+
+  <div class="layout">
+      <div class="layout-image" *ngFor="let relate of relates">
+          <img src="{{relate.img}}" alt="">
+          <p class="datetime">23/12/2019</p>
+          <p class="infor">{{relate.infor}}</p>
+      </div>
+  </div>
+</div>

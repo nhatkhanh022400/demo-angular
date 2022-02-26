@@ -1,0 +1,46 @@
+<main>
+  <div class="filter-layout">
+      <div class="slide-page">
+
+              <img src="assets/img/Group183.svg" alt="">
+
+          <span>
+              <a href="#" style="border-bottom: 1px solid #649E0F; color: #649E0F;">1</a>
+          </span>
+          <span>
+              <a href="#">2</a>
+          </span>
+          <span>
+              <a href="#">3</a>
+          </span>
+          <span>
+              <a href="#">4</a>
+          </span>
+
+              <img src="assets/img/Group182.svg" alt="">
+
+
+      </div>
+  </div>
+
+  <div class="title-page">
+      <div class="title-layout">ニュース</div>
+
+      <div class="articles-page">
+          <span>
+              <a href="#">Articles per Page</a>
+          </span>
+          <a href="#" style="border-bottom: 3px solid #649E0F ; color: #649E0F;">16</a>
+          <a href="#">24</a>
+      </div>
+  </div>
+
+  <div class="layout">
+      <div class="layout-image" *ngFor="let layout of layouts">
+          <img src="{{layout.img}}" alt="">
+          <p class="datetime">23/12/2019</p>
+          <p class="infor">{{layout.infor}}</p>
+      </div>
+    </div>
+</main>
+

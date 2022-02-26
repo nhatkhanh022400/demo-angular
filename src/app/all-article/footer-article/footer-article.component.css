@@ -1,0 +1,44 @@
+.footer-top{
+  display: flex;
+  width: 1440px;
+}
+
+.hive-left{
+  margin-top: 78px;
+  width: 365.61px;
+  height: 439.33px;
+}
+
+.logo-bee{
+  padding: 126px 270px 172.04px 244px;
+}
+
+.logo-bee img{
+  width: 239.98px;
+  height: 165.86px;
+}
+
+.hive-right{
+  width: 320px;
+  height: 507.22px;
+  transform: translateY(-50px);
+
+}
+
+.footer-bottom{
+  width: 100%;
+  height: 60px;
+  background-color: #F9FAF9;
+  transform: translateY(-100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+}
+.footer-bottom p {
+  font-size: 13px;
+  font-weight: 400;
+  color: #626662;
+  line-height: 18.28px;
+  letter-spacing: 0.1em;
+}

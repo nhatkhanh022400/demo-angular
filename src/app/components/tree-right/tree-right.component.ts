@@ -1,4 +1,7 @@
 import { Component, OnInit, ɵɵqueryRefresh } from '@angular/core';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { PopupComponent } from './../popup/popup.component';
+
 
 
 
@@ -8,6 +11,7 @@ import { Component, OnInit, ɵɵqueryRefresh } from '@angular/core';
   styleUrls: ['./tree-right.component.css']
 })
 export class TreeRightComponent implements OnInit {
+
 
   treeViews = [
       {
@@ -113,7 +117,7 @@ export class TreeRightComponent implements OnInit {
           margins: '5px',
           icon: 'bi bi-plus-lg',
           color: '#2aa843',
-          popup: '#popup'
+          popup: 'openPopup()'
         },
         {
           name: 'Xuất file Excel',
@@ -132,7 +136,11 @@ export class TreeRightComponent implements OnInit {
         }
       ]
 
-  constructor() { }
+  constructor(private dialogRef : MatDialog ) {}
+  openPopup(){
+    this.dialogRef.open(PopupComponent);
+  }
+
 
   ngOnInit(): void {
   }
